@@ -1,0 +1,35 @@
+{
+  "server": {
+    "opnPath": {
+      "local": "/public/index.html",
+      "build": "/product/deme/index.html"
+    },
+    "livereload": {
+      "watch": "./public/*"
+    },
+    "proxy": [
+      {
+        "method": "post",
+        "route": "/proxy/Trans/access",
+        "options": {
+          "host": "https://swebsit.jyblife.com",
+          "url": "https://swebsit.jyblife.com/Trans/access",
+          "requestOptions": {
+            "strictSSL": false
+          }
+        }
+      },
+      {
+        "method": "post",
+        "route": "/proxy/jjdzmall",
+        "options": {
+          "host": "https://sweb.jjdzmall.com",
+          "url": "https://sweb.jjdzmall.com/Trans/access",
+          "requestOptions": {
+            "strictSSL": false
+          }
+        }
+      }
+    ]
+  }
+}
